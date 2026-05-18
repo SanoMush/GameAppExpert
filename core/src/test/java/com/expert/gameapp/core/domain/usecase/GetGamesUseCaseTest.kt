@@ -32,7 +32,15 @@ class GetGamesUseCaseTest {
     fun `when invoke getGames should return Success with list of games`() = runTest {
         // Arrange
         val mockGames = listOf(
-            Game(1, "Game 1", "2023", "http://image.com", 4.5, "Description", false)
+            Game(
+                id = 1,
+                name = "Game 1",
+                backgroundImage = "https://image.com",
+                rating = 4.5,
+                released = "2023",
+                isFavorite = false,
+                description = "Description"
+            )
         )
         val expectedResource = Resource.Success(mockGames)
         `when`(gameRepository.getGames()).thenReturn(flowOf(expectedResource))
