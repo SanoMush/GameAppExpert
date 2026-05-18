@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GameAppExpert</string>
+    <string name="title_favorite">favorite</string>
+    <string name="games_title">Games</string>
+    <string name="search_content_description">Search</string>
+    <string name="favorite_content_description">Favorite</string>
+    <string name="search_placeholder">Search games...</string>
+    <string name="search_icon_description">Search Icon</string>
+</resources>
