@@ -39,3 +39,5 @@
 # Data Models to prevent crash in serialization and DB query
 -keep class com.expert.gameapp.core.data.source.remote.response.** { *; }
 -keep class com.expert.gameapp.core.data.source.local.entity.** { *; }
+
+-dontwarn java.lang.invoke.**
