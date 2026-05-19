@@ -15,7 +15,7 @@ android {
         minSdk = 24
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
+        consumerProguardFiles("proguard-rules.pro")
 
         // Read RAWG_API_KEY from local.properties
         val localProperties = Properties()

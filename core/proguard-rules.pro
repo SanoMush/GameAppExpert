@@ -41,3 +41,21 @@
 -keep class com.expert.gameapp.core.data.source.local.entity.** { *; }
 
 -dontwarn java.lang.invoke.**
+-keep class net.sqlcipher.** { *; }
+-dontwarn net.sqlcipher.**
+
+-dontwarn com.google.errorprone.annotations.**
+
+-keepattributes Signature
+-keepattributes *Annotation*
+-keepattributes EnclosingMethod
+-keepattributes InnerClasses
+
+# 1. Menyelamatkan TypeToken Gson (Penyebab utama ClassCastException)
+-keep class com.google.gson.reflect.TypeToken { *; }
+-keep class * extends com.google.gson.reflect.TypeToken { *; }
+
+# 2. Menyelamatkan Interface API Retrofit (@GET, @Path, dll)
+-keepclasseswithmembers interface * {
+    @retrofit2.http.* <methods>;
+}
